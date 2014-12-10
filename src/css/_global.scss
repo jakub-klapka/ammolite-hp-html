@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/*
+Rhythm
+*/
+@import "inc/rhythm";
+@include rhythm-init( 15px, ( 25/15 ), 'golden section' );
+
+/*
+Vars
+*/
+$header_black: #0f0c09;
+$bg_brown: #221d17;
+$header_height: 110px;
+$main_gold: #bba454;
+
+$main_font: 'Slabo 27px', serif;
