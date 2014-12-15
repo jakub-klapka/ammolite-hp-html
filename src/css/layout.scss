@@ -18,8 +18,10 @@ html {
 Layout
 */
 .container {
-	max-width: 1100px;
+	$padding: 10px;
+	max-width: ( $container_max_width + $padding );
 	margin: 0 auto;
+	padding: 0 $padding;
 }
 
 .main_header {
@@ -27,26 +29,16 @@ Layout
 	background: $bg_brown;
 
 		.container {
-			height: $header_height;
-			line-height: $header_height;
-			text-align: justify;
-
-				> * {
-					line-height: rhythm(1);
-				}
-
-				&::after {
-					content: '';
-					display: inline-block;
-					width: 100%;
-					height: 0;
-				}
+			min-height: $header_height;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
 		}
 
 		}
 		.main_header__logo {
-			display: inline-block;
-			vertical-align: middle;
+			margin: 10px 0;
 
 				img {
 					display: block;
@@ -54,8 +46,7 @@ Layout
 		}
 
 		.main_header__menu {
-			display: inline-block;
-			vertical-align: middle;
+			margin: 10px 0;
 
 				}
 				.main_header__menu__ul {
@@ -88,3 +79,37 @@ Layout
 									}
 								}
 						}
+
+@import "inc/owl.carousel";
+
+.slider {
+	position: relative;
+
+		}
+		.slider__image {
+			max-width: 100%;
+			display: block;
+		}
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+			display: block;
+			top: 50%;
+			height: 25%;
+			transform: translateY( -50% );
+			font-size: 0;
+			color: transparent;
+		}
+		.owl-next {
+			right: 0;
+
+				&::after {
+					@include svg_sprite_arrow_right();
+				}
+		}
+		.owl-prev {
+
+			&::after {
+				@include svg_sprite_arrow_left();
+			}
+		}

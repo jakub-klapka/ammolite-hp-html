@@ -1,0 +1,18 @@
+{#common}
+@mixin svg_sprite() {
+	content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("{svgPath}");
+    background-repeat: no-repeat;
+    background-size: ({relWidth}*10px) ({relHeight}*10px);
+}
+{/common}
+{#svg}
+@mixin svg_sprite_{name} {
+	@include svg_sprite();
+	background-position: ({relPositionX}*10px) ({relPositionY}*10px);
+    width: ({relWidth}*10px);
+    height: ({relHeight}*10px);
+}
+{/svg}

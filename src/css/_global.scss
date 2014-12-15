@@ -6,6 +6,8 @@ Rhythm
 @import "inc/rhythm";
 @include rhythm-init( 15px, ( 25/15 ), 'golden section' );
 
+@import "svg_sprite";
+
 /*
 Vars
 */
@@ -13,5 +15,6 @@ $header_black: #0f0c09;
 $bg_brown: #221d17;
 $header_height: 110px;
 $main_gold: #bba454;
+$container_max_width: 1100px;
 
 $main_font: 'Slabo 27px', serif;
