@@ -128,8 +128,14 @@ Layout
 
 @import "inc/owl.carousel";
 
+.slider_wrap {
+	background: $bg_brown;
+}
+
 .slider {
 	position: relative;
+	max-width: 1920px;
+	margin: 0 auto;
 
 		}
 		.slider__image {
@@ -147,13 +153,15 @@ Layout
 			color: transparent;
 			width: 50px;
 			background-size: contain;
+			background-repeat: no-repeat;
 		}
 		.owl-next {
 			right: 0;
-			background: url( '../images/arrow_right.svg' ) left top no-repeat;
+			background-image: url( '../images/arrow_right.svg' );
+			background-position: right;
 		}
 		.owl-prev {
-			background: url( '../images/arrow_left.svg' ) left top no-repeat;
+			background-image: url( '../images/arrow_left.svg' );
 		}
 
 .columns {
