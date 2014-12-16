@@ -18,3 +18,27 @@ $main_gold: #bba454;
 $container_max_width: 1100px;
 
 $main_font: 'Slabo 27px', serif;
+
+@mixin heading_font() {
+	font-family: 'PT Sans', sans-serif;
+	font-weight: bold;
+}
+
+@mixin respond-to( $key, $value: null ) {
+	@if( $key == 'max-width' ) {
+		@media only screen and ( max-width: $value ) {
+			@content;
+		}
+	}
+	@else if( $key == 'switcher_wrap' ) {
+		@media only screen and ( max-width: 785px ) {
+			@content;
+		}
+	}
+	@else if( $key == 'vyroba_wrap' ) {
+		@media only screen and ( max-width: 615px ) {
+			@content;
+		}
+	}
+
+}
