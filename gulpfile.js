@@ -55,7 +55,7 @@ var css = function() {
 	return gulp.src( 'src/css/**/*.scss', { base: 'src/css' } )
 		.pipe( plumber( plumber_config ) )
 		.pipe( sass( {
-
+			style: 'compressed'
 		} ) )
 		.pipe( filter( [ '*', '!**/*.map' ] ) )
 		.pipe( autoprefixer() )
@@ -121,7 +121,10 @@ HTML
 gulp.task( 'html', function(){
 	return gulp.src( 'src/index.html' )
 		.pipe( plumber( plumber_config ) )
-		.pipe( html_replace( { js: 'js/layout.js' } ) )
+		.pipe( html_replace( {
+			js: 'js/layout.js',
+			css: 'css/layout.css'
+		} ) )
 		.pipe( prettify() )
 		.pipe( gulp.dest( 'dist' ) );
 } );
