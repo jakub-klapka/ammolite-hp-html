@@ -80,6 +80,10 @@ Layout
 			flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: center;
+
+				@include respond-to( '!page_wrap' ) {
+					height: $header_height; //IE fix
+				}
 		}
 
 		}
@@ -194,6 +198,12 @@ Layout
 				@include respond-to( 'max-width', 500px ){
 					width: 100%;
 					margin-right: 0;
+
+						img {
+							display: block;
+							margin-left: auto;
+							margin-right: auto;
+						}
 				}
 
 
@@ -421,3 +431,102 @@ Layout
 					top: -2px;
 				}
 		}
+
+
+.showcase {
+
+	}
+	.showcase_heading {
+		text-align: center;
+		margin-top: rhythm(1);
+	}
+	.showcase__subheading {
+		text-decoration: none;
+		text-align: center;
+		display: block;
+		font-family: $main_font;
+		font-weight: normal;
+		text-transform: none;
+		font-size: 18px;
+		margin-top: rhythm(1);
+		margin-bottom: rhythm(2);
+		transition: color 200ms;
+		color: $main_gold;
+
+			&:hover {
+				color: $bg_brown;
+			}
+
+			h2 {
+				font-family: inherit;
+				font-weight: inherit;
+				font-size: inherit;
+				text-transform: inherit;
+				color: inherit;
+			}
+	}
+	.showcase__gallery {
+		margin-top: rhythm(1);
+		margin-bottom: rhythm(2);
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+
+			@include respond-to( 'max-width', 1076px ) {
+				justify-content: center;
+			}
+
+			.no-flexbox & {
+				font-size: 0;
+
+					& > * {
+						font-size: 1rem;
+					}
+			}
+
+		}
+		$image_bg: #f3f3f3;
+		.showcase__gallery__item {
+			margin: 0 10px rhythm(1) 10px;
+			width: auto;
+			display: flex;
+			flex-direction: column;
+			text-decoration: none;
+			color: inherit;
+			text-align: center;
+
+				&:hover {
+					.showcase__gallery__item__image {
+						background: darken( $image_bg, 10% );
+					}
+				}
+
+				.no-flexbox & {
+					display: inline-block;
+					width: calc( #{22%} );
+				}
+
+			}
+			.showcase__gallery__item__image {
+				background: $image_bg;
+				padding: 30px;
+				transition: background-color 300ms;
+
+					img {
+						display: block;
+						max-width: 100%;
+						height: auto;
+					}
+			}
+			.showcase__gallery__item__name {
+				color: $main_gold;
+				@include heading_font();
+				text-transform: uppercase;
+				margin-top: rhythm(1);
+			}
+			.showcase__gallery__item__desc {
+				font-style: italic;
+				color: #8e8c92;
+			}

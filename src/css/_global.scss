@@ -40,5 +40,9 @@ $main_font: 'Slabo 27px', serif;
 			@content;
 		}
 	}
-
+	@else if( $key == '!page_wrap' ) {
+		@media only screen and ( min-width: $container_max_width ) {
+			@content;
+		}
+	}
 }
