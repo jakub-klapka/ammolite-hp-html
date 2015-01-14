@@ -499,7 +499,7 @@ Layout
 
 				&:hover {
 					.showcase__gallery__item__image {
-						background: darken( $image_bg, 10% );
+						outline-color: $main_gold;
 					}
 				}
 
@@ -510,9 +510,8 @@ Layout
 
 			}
 			.showcase__gallery__item__image {
-				background: $image_bg;
-				padding: 30px;
-				transition: background-color 300ms;
+				outline: 1px solid transparent;
+				transition: outline-color 300ms;
 
 					img {
 						display: block;
