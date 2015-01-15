@@ -140,6 +140,8 @@ Layout
 	position: relative;
 	max-width: 1920px;
 	margin: 0 auto;
+	max-height: 50vh;
+	overflow: hidden;
 
 		}
 		.slider__image {
