@@ -11,7 +11,7 @@
 	<!-- http://www.google.com/fonts#UsePlace:use/Collection:PT+Sans:700|Slabo+27px/Script:latin-ext -->
 	<link href='//fonts.googleapis.com/css?family=PT+Sans:700|Slabo+27px&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<!-- build:css -->
-	<link rel="stylesheet" href="../dist/css/layout.css?v=2"/>
+	<link rel="stylesheet" href="../dist/css/layout.css?v=3"/>
 	<!-- endbuild -->
 
 	<link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
@@ -38,11 +38,11 @@
 
 		<nav class="main_header__menu" role="navigation">
 			<ul class="main_header__menu__ul">
-				<li class="main_header__menu__ul__item"><a href="http://shop.ammolite.cz/">O nás</a></li>
-				<li class="main_header__menu__ul__item"><a href="http://shop.ammolite.cz/">Ammolite</a></li>
-				<li class="main_header__menu__ul__item"><a href="http://shop.ammolite.cz">E-shop</a></li>
+				<li class="main_header__menu__ul__item"><a href="http://shop.ammolite.cz/cz-clanky-21.html">O nás</a></li>
+				<li class="main_header__menu__ul__item"><a href="#ammolite">Ammolite</a></li>
+				<li class="main_header__menu__ul__item"><a href="http://shop.ammolite.cz/cz-kategorie_0-0.html">E-shop</a></li>
 				<li class="main_header__menu__ul__item"><a href="http://shop.ammolite.cz/cz-sekce-obchodni_podminky.html">Obchodní podmínky</a></li>
-				<li class="main_header__menu__ul__item"><a href="http://shop.ammolite.cz/cz-sekce-kontaktni_informace.html">Kontakt</a></li>
+				<li class="main_header__menu__ul__item"><a href="#kontakt">Kontakt</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -51,22 +51,28 @@
 <section class="slider_wrap">
 	<div class="slider">
 		<img class="slider__image" alt="Ammolite" srcset="
-			images/slider_1_1920w.jpg 1920w,
-			images/slider_1_1024w.jpg 1024w,
-			images/slider_1_768w.jpg 768w,
-			images/slider_1_450w.jpg 450w,
-			images/slider_1_320w.jpg 320w"/>
+			images/slider_1_1920w.jpg?v=2 1920w,
+			images/slider_1_1024w.jpg?v=2 1024w,
+			images/slider_1_768w.jpg?v=2 768w,
+			images/slider_1_450w.jpg?v=2 450w,
+			images/slider_1_320w.jpg?v=2 320w"/>
 		<img class="slider__image" alt="Ammolite" srcset="
-			images/slider_2_1920w.jpg 1920w,
-			images/slider_2_1024w.jpg 1024w,
-			images/slider_2_768w.jpg 768w,
-			images/slider_2_450w.jpg 450w,
-			images/slider_2_320w.jpg 320w"/>
+			images/slider_2_1920w.jpg?v=2 1920w,
+			images/slider_2_1024w.jpg?v=2 1024w,
+			images/slider_2_768w.jpg?v=2 768w,
+			images/slider_2_450w.jpg?v=2 450w,
+			images/slider_2_320w.jpg?v=2 320w"/>
+		<img class="slider__image" alt="Ammolite" srcset="
+			images/slider_3_1920w.jpg?v=2 1920w,
+			images/slider_3_1024w.jpg?v=2 1024w,
+			images/slider_3_768w.jpg?v=2 768w,
+			images/slider_3_450w.jpg?v=2 450w,
+			images/slider_3_320w.jpg?v=2 320w"/>
 
 	</div>
 </section>
 
-<section class="dark_block">
+<section class="dark_block" id="ammolite">
 	<div class="container">
 
 		<div class="columns">
@@ -96,12 +102,72 @@
 	</div>
 </section>
 
+
+<section class="eshop_teaser">
+	<img class="eshop_teaser__image" alt="Ammolite e-shop" srcset="
+		images/eshop_1920w.jpg 1920w,
+		images/eshop_1024w.jpg 1024w,
+		images/eshop_768w.jpg 768w,
+		images/eshop_450w.jpg 450w" />
+
+	<div class="eshop_teaser__description">
+		<h1 class="eshop_teaser__description__heading">E-shop ammolite</h1>
+		<h2 class="eshop_teaser__description__subheading">Naše nabídka šperků</h2>
+		<a class="eshop_teaser__description__button" href="http://shop.ammolite.cz">Vstoupit</a>
+	</div>
+
+</section>
+
+
+<section class="white_block">
+	<div class="container">
+
+
+		<a href="http://shop.ammolite.cz" class="showcase__subheading"><h2>Naše nabídka šperků &rarr;</h2></a>
+
+		<div class="showcase__gallery">
+			<a class="showcase__gallery__item" href="http://shop.ammolite.cz">
+				<div class="showcase__gallery__item__image">
+					<img src="images/gallery_01.jpg" alt="" width="245" height="245"/>
+				</div>
+				<div class="showcase__gallery__item__name">Náušnice</div>
+			</a>
+			<a class="showcase__gallery__item" href="http://shop.ammolite.cz">
+				<div class="showcase__gallery__item__image">
+					<img src="images/gallery_02.jpg" alt="" width="245" height="245"/>
+				</div>
+				<div class="showcase__gallery__item__name">Prsteny</div>
+				<!--<div class="showcase__gallery__item__desc">Brown, Leather</div>-->
+			</a>
+			<a class="showcase__gallery__item" href="http://shop.ammolite.cz">
+				<div class="showcase__gallery__item__image">
+					<img src="images/gallery_03.jpg" alt="" width="245" height="245"/>
+				</div>
+				<div class="showcase__gallery__item__name">Přívěsky</div>
+				<!--<div class="showcase__gallery__item__desc">Small, Women</div>-->
+			</a>
+			<a class="showcase__gallery__item" href="http://shop.ammolite.cz">
+				<div class="showcase__gallery__item__image">
+					<img src="images/gallery_04.jpg" alt="" width="245" height="245"/>
+				</div>
+				<div class="showcase__gallery__item__name">Přívěsky</div>
+				<!--<div class="showcase__gallery__item__desc">Orange, Women</div>-->
+			</a>
+
+		</div>
+
+	</div>
+</section>
+
 <section class="white_block">
 	<div class="container">
 
 		<div class="switcher">
 			<div class="switcher__selector">
 				<h2>Ammolite / Vyjímečný originál</h2>
+				<button class="switcher__selector__button" data-target="ammolite_a_staroveky_egypt">Ammolite a starověký egypt</button>
+				<button class="switcher__selector__button" data-target="ammolite_a_indianska_legenda">Ammolite a indiánská legenda</button>
+				<button class="switcher__selector__button" data-target="cinske_uceni">Čínské učení Feng-šuej</button>
 				<button class="switcher__selector__button" data-target="nejdrive_byl_ammonite">Nejdříve byl Ammonite</button>
 				<button class="switcher__selector__button" data-target="pote_ammolite">Poté Ammolite</button>
 				<button class="switcher__selector__button" data-target="tezba_ammolite">Těžba Ammolite</button>
@@ -114,6 +180,36 @@
 				<button class="switcher__selector__button" data-target="ammolite_a_svet">Ammolite a Svět</button>
 			</div>
 			<div class="switcher__content">
+				<div class="switcher__content__item" data-id="ammolite_a_staroveky_egypt">
+					<h1>Ammolite a starověký egypt</h1>
+
+					<img src="images/switcher/ammolite_a_staroveky_egypt.jpg" alt="" width="237" height="285" class="image_float_left"/>
+					<p>Zdrojem pro název Ammonite je starověký Egypt.  Ammon byl egyptský bůh, který považoval měkkýše za božské, byl vždy zobrazován s hlavou berana se spirálními rohy a tím tedy připomínal zakroucený tvar pláště Ammonitů. Římský válečník, filosof a historik Plinius starší pohlížel na Ammonite jako na nejposvátnější z kamenů a domníval se, že má schopnost vyvolávat prorocké sny.</p>
+
+				</div>
+
+				<div class="switcher__content__item" data-id="cinske_uceni">
+					<h1>ČÍNSKÉ UČENÍ FENG - ŠUEJ</h1>
+
+					<img src="images/switcher/cinske_uceni.jpg" alt="" width="274" height="282" class="image_float_left"/>
+					<p><strong>Feng-šuej</strong> (feng shui) – doslova „vítr a voda“  - tradiční čínské učení, které se zabývá vztahem člověka a jeho životního prostoru v čase. Pokouší se nastolit harmonii v prostoru a umožnit nerušené plynutí energie ČCHI. Feng-šuej má dvě hlavní školy: školu formy a školu kompasu. Pracuje mimo jiné s polaritou jinu a jangu a s takzvanými pěti elementy (voda, země, dřevo, oheň, kov), snaží se mezi nimi nastolit harmonii prostřednictvím barev, tvarů, materiálů, vůní i zvuků. Jedním z pilířů této nauky je i čínská astrologie.
+						Známý Feng Shui mistr Edward Kui Ming Li nazývá Ammolite "nejvlivnější kámen tisíciletí". Mezi významné vlastnosti Ammolite, které jsou uznávány mnoha odborníky v rámci Feng Shui, patří zvyšování toku ČCHI po celém těle, snižování hladiny toxicity a podpora životní pohody. Stimuluje a podporuje bohatství, tvořivost, intelekt, energii a moudrost. Úžasný klenot přináší nejen rovnováhu těla osoby, ta pozitivně ovlivňuje také své okolí. Přítomnost Ammolite ve vaší kanceláři bude přispívat k úspěšnosti vašich obchodních jednání, jeho přítomnost ve vašem domě či bytě přispěje ke šťastnému rodinnému životu.
+						Praktici Feng Shui věří, že za posledních sedmdesát milionů let tento geologický fenomén absorboval značnou část pozitivní kosmické energie ze země a vesmíru.  Světelná energie je jedna z forem ČCHI a je vyzařována z Ammolite prakticky v každé barvě viditelného spektra. Každá barva odpovídá specifické vlnové energii, proto tedy různé specifické vlnové délky jednotlivých barev mohou pomoci při vyvažování různých oblasti osobní ČCHI.</p>
+
+				</div>
+
+
+
+				<div class="switcher__content__item" data-id="ammolite_a_indianska_legenda">
+					<h1>Ammolite a indiánská legenda</h1>
+
+					<img src="images/switcher/ammolite_a_indianska_legenda_1.jpg" alt="" width="402" height="303" class="image_float_left"/>
+					<p>Ammolite v oblasti kanadských Skalistých hor objevili poprvé Blackfoot Indiáni, kteří mu říkali "iniskim" neboli buvolí kámen. Legenda Indiánů vypráví příběh mimořádně kruté zimy, kdy všichni buvoli zmizeli z okolních pastvin a kmen byl sužován krutým hladem. Mladá, statečná indiánská žena se odvážila do lesa a v hlubokém sněhu hledala dříví na oheň. V tom zaslechla překrásnou píseň, následovala její hlas a pod velkým topolem poprvé objevila Ammolite. Duch jí řekl, že kámen je silný lék, talisman pro lov buvolů a bizonů a že by si jej měla vzít zpět ke svým lidem. Žena přinesla Ammolite zpět do tábora svého kmene, kde uspořádali slavnostní obřad. Druhý den ráno přitáhlo do okolí velké stádo buvolů, kmen byl ušetřen od hladomoru a strádání. Od té doby mají Indiáni Ammolite zabalený v buvolí kůži ve svém svazku léčebných a posvátných předmětů a používají ho při všech svých loveckých obřadech.</p>
+
+					<img src="images/switcher/ammolite_a_indianska_legenda_2.jpg" alt="" width="445" height="235" class="image_float_left"/>
+
+				</div>
+
 				<div class="switcher__content__item" data-id="nejdrive_byl_ammonite">
 					<h1>Nejdříve byl Ammonite</h1>
 
@@ -357,60 +453,55 @@
 	</div>
 </section>
 
-<section class="eshop_teaser">
-	<img class="eshop_teaser__image" alt="Ammolite e-shop" srcset="
-		images/eshop_1920w.jpg 1920w,
-		images/eshop_1024w.jpg 1024w,
-		images/eshop_768w.jpg 768w,
-		images/eshop_450w.jpg 450w" />
 
-	<div class="eshop_teaser__description">
-		<h1 class="eshop_teaser__description__heading">E-shop ammolite</h1>
-		<h2 class="eshop_teaser__description__subheading">Naše nabídka šperků</h2>
-		<a class="eshop_teaser__description__button" href="http://shop.ammolite.cz">Vstoupit</a>
-	</div>
 
-</section>
 
-<section class="white_block">
+<section class="white_block" id="kontakt">
 	<div class="container">
 
-		<h1 class="showcase_heading">E-shop Ammolite</h1>
-		<a href="http://shop.ammolite.cz" class="showcase__subheading"><h2>Naše nabídka šperků &rarr;</h2></a>
+		<h1 class="vyroba_proces__heading is-dark">Kontakt</h1>
 
-		<div class="showcase__gallery">
-			<a class="showcase__gallery__item" href="http://shop.ammolite.cz">
-				<div class="showcase__gallery__item__image">
-					<img src="images/gallery_01.jpg" alt="" width="245" height="245"/>
-				</div>
-				<div class="showcase__gallery__item__name">Náušnice</div>
-			</a>
-			<a class="showcase__gallery__item" href="http://shop.ammolite.cz">
-				<div class="showcase__gallery__item__image">
-					<img src="images/gallery_02.jpg" alt="" width="245" height="245"/>
-				</div>
-				<div class="showcase__gallery__item__name">Prsteny</div>
-				<!--<div class="showcase__gallery__item__desc">Brown, Leather</div>-->
-			</a>
-			<a class="showcase__gallery__item" href="http://shop.ammolite.cz">
-				<div class="showcase__gallery__item__image">
-					<img src="images/gallery_03.jpg" alt="" width="245" height="245"/>
-				</div>
-				<div class="showcase__gallery__item__name">Přívěsky</div>
-				<!--<div class="showcase__gallery__item__desc">Small, Women</div>-->
-			</a>
-			<a class="showcase__gallery__item" href="http://shop.ammolite.cz">
-				<div class="showcase__gallery__item__image">
-					<img src="images/gallery_04.jpg" alt="" width="245" height="245"/>
-				</div>
-				<div class="showcase__gallery__item__name">Přívěsky</div>
-				<!--<div class="showcase__gallery__item__desc">Orange, Women</div>-->
-			</a>
+		<div class="vyroba_proces">
+			<div class="vyroba_proces__column is-centered">
+
+				<p><strong>Obchodní společnost Judas & Judas s.r.o.</strong><br/>
+				Pernerova 378/31<br/>
+				Praha 8<br/>
+				180 00<br/>
+				IČO: 29013224<br/>
+				DIČ: CZ 29013224
+				</p>
+
+			</div>
+			<div class="vyroba_proces__column is-centered">
+				<p>
+					<strong>Jiří Judas CZ</strong><br/>
+					Hany Kvapilové 14, Olomouc, Czech Republic<br/>
+					+420 603 206 547<br/>
+					<a href="mailto:cz@ammolite.cz">cz@ammolite.cz</a><br/>
+					<br/>
+					<strong>Peter Judas CAN</strong><br/>
+					#2-1456, east 8th avenue Vancouver B.C., Canada<br/>
+					+01 778 710 7625<br/>
+					<a href="can@ammolite.cz">can@ammolite.cz</a>
+				</p>
+			</div>
 
 		</div>
 
 	</div>
 </section>
+
+
+
+<section class="dark_block">
+	<div class="container">
+
+		<div class="copyright">&copy; 2015 <a href="http://www.artcompany.cz">ArtCompany.cz</a> | Všechna práva vyhrazena</div>
+
+	</div>
+</section>
+
 
 <!-- build:js -->
 <script type="text/javascript" src="js/libs/picturefill.js"></script>
@@ -423,6 +514,7 @@
 <script type="text/javascript" src="js/owl_carousel.js"></script>
 <script type="text/javascript" src="js/switcher.js"></script>
 <script type="text/javascript" src="js/fit_video.js"></script>
+<script type="text/javascript" src="js/smooth_scroll.js"></script>
 <!-- endbuild -->
 
 </body>

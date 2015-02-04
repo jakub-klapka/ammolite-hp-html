@@ -122,8 +122,8 @@ gulp.task( 'html', function(){
 	return gulp.src( 'src/index.html' )
 		.pipe( plumber( plumber_config ) )
 		.pipe( html_replace( {
-			js: 'js/layout.js',
-			css: 'css/layout.css'
+			js: 'js/layout.js?v=3',
+			css: 'css/layout.css?v=3'
 		} ) )
 		.pipe( prettify() )
 		.pipe( gulp.dest( 'dist' ) );

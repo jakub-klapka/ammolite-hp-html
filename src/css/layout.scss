@@ -136,17 +136,34 @@ Layout
 	background: $bg_brown;
 }
 
+
+$slider_max_height: 428px;
 .slider {
 	position: relative;
 	max-width: 1920px;
 	margin: 0 auto;
-	max-height: 50vh;
 	overflow: hidden;
+
+		@include respond-to( 'min-width', 1200px ) {
+			height: $slider_max_height;
+		}
+
+		.owl-wrapper-outer {
+			@include respond-to( 'min-width', 1200px ) {
+				height: $slider_max_height;
+			}
+		}
 
 		}
 		.slider__image {
 			max-width: 100%;
 			display: block;
+
+				@include respond-to( 'min-width', 1200px ) {
+					position: relative;
+					transform: translateY( calc( -50% + #{($slider_max_height/2)} ) );
+				}
+
 		}
 		.owl-prev,
 		.owl-next {
@@ -231,6 +248,7 @@ Layout
 		margin-right: rhythm(1);
 		display: inline-block;
 		vertical-align: top;
+		margin-bottom: 50px;
 
 			@include respond-to( 'switcher_wrap' ) {
 				width: 100%;
@@ -331,11 +349,23 @@ Layout
 			@include respond-to( 'vyroba_wrap' ) {
 				width: 100%;
 			}
+
+			&.is-centered {
+				text-align: center;
+			}
+
+			a {
+				color: $main_gold;
+			}
 	}
 	.vyroba_proces__heading {
 		color: #FFF;
 		text-align: center;
 		margin-bottom: rhythm(1);
+
+			&.is-dark {
+				color: $main_gold;
+			}
 	}
 	.vyroba_proces__subheading {
 		text-transform: none;
@@ -531,3 +561,14 @@ Layout
 				font-style: italic;
 				color: #8e8c92;
 			}
+
+.copyright {
+	margin-top: -20px;
+	padding-bottom: 20px;
+	font-size: 13px;
+	color: grey;
+
+		a {
+			color: inherit;
+		}
+}
