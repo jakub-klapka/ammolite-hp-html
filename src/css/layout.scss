@@ -332,7 +332,27 @@ $slider_max_height: 428px;
 			clear: both;
 			content: '';
 			display: table;
-		}	
+		}
+
+		a {
+			color: $main_gold;
+		}
+
+		&__image {
+			float: left;
+			max-width: 45%;
+			height: auto;
+			margin: 1em 0;
+
+				&.is-right {
+					float: right;
+				}
+
+				@include respond-to( 'max-width', 700px ) {
+					width: 100%;
+					max-width: 100%;
+				}
+		}
 	}
 	.vyroba_proces__column {
 		width: calc( 50% - #{rhythm(1)/2} );
@@ -352,10 +372,6 @@ $slider_max_height: 428px;
 
 			&.is-centered {
 				text-align: center;
-			}
-
-			a {
-				color: $main_gold;
 			}
 	}
 	.vyroba_proces__heading {
@@ -385,6 +401,7 @@ $slider_max_height: 428px;
 	.eshop_teaser__image {
 		display: block;
 		width: 100%;
+		max-height: 400px;
 		max-width: 1920px;
 		margin: 0 auto;
 

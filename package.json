@@ -11,7 +11,6 @@
     "gulp-plumber": "~0.6.6",
     "gulp-prettify": "^0.3.0",
     "gulp-ruby-sass": "~0.7.1",
-    "gulp-svg-sprites": "~1.1.0",
     "gulp-uglify": "^1.0.2"
   }
 }

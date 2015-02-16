@@ -8,7 +8,7 @@ var gulp = require( 'gulp' ),
 	prettify = require( 'gulp-prettify' ),
 	html_replace = require( 'gulp-html-replace' ),
 	uglify = require( 'gulp-uglify' ),
-	svg_sprites = require( 'gulp-svg-sprites' ),
+	//svg_sprites = require( 'gulp-svg-sprites' ),
 	autoprefixer = require( 'gulp-autoprefixer' );
 
 var plumber_config = {
@@ -24,6 +24,7 @@ var imagemin_config = {
 
 /*
 SVG sprite
+NOT WORKING ANYMORE! (node-gyp errors...)
  */
 gulp.task( 'svg_sprite', function() {
 	return gulp.src( 'src/svg_sprite/*.svg' )
@@ -61,7 +62,8 @@ var css = function() {
 		.pipe( autoprefixer() )
 		.pipe( gulp.dest( 'dist/css' ) );
 };
-gulp.task( 'sass', ['svg_sprite'], css );
+//gulp.task( 'sass', ['svg_sprite'], css );
+gulp.task( 'sass', css );
 gulp.task( 'sass_wo_sprite', css );
 gulp.task( 'sass_watch', function(){
 	gulp.watch( 'src/css/**/*', ['sass_wo_sprite'] );
@@ -122,7 +124,7 @@ gulp.task( 'html', function(){
 	return gulp.src( 'src/index.html' )
 		.pipe( plumber( plumber_config ) )
 		.pipe( html_replace( {
-			js: 'js/layout.js?v=3',
+			js: 'js/layout.js?v=4',
 			css: 'css/layout.css?v=3'
 		} ) )
 		.pipe( prettify() )
@@ -134,5 +136,5 @@ gulp.task( 'html', function(){
 Tasks
  */
 
-gulp.task( 'dev', [ 'sass_watch', 'livereload', 'svg_watch', 'images_watch' ] );
+gulp.task( 'dev', [ 'sass_watch', 'livereload', 'images_watch' ] );
 gulp.task( 'default', [ 'sass', 'images', 'js', 'html' ] );
