@@ -3,7 +3,7 @@
 
 	$( '.slider' ).owlCarousel( {
 		singleItem: true,
-		autoPlay: 6000,
+		autoPlay: 2000,
 		stopOnHover: true,
 		navigation: true,
 		pagination: false

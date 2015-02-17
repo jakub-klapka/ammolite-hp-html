@@ -16,6 +16,10 @@
 			this.buttons.on( 'click', function(){
 				self.change( $( this ) );
 			} );
+
+			$( 'a[data-switcher-target]' ).on( 'click', function(){
+				self.changeToTarget( $( this ).data( 'switcher-target' ) );
+			} );
 		},
 
 		change: function( button ) {
@@ -24,6 +28,12 @@
 			this.items.velocity( 'fadeOut', { duration: 500 } );
 			final_item.velocity( 'fadeIn', { duration: 500 } );
 
+		},
+
+		changeToTarget: function ( target ) {
+			var final_item = this.items.filter( '[data-id=' + target + ']' );
+			this.items.velocity( 'fadeOut', { duration: 500 } );
+			final_item.velocity( 'fadeIn', { duration: 500 } );
 		}
 
 	};
