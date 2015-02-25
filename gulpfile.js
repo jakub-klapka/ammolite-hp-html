@@ -124,7 +124,7 @@ gulp.task( 'html', function(){
 	return gulp.src( 'src/index.html' )
 		.pipe( plumber( plumber_config ) )
 		.pipe( html_replace( {
-			js: 'js/layout.js?v=4',
+			js: 'js/layout.js?v=5',
 			css: 'css/layout.css?v=3'
 		} ) )
 		.pipe( prettify() )

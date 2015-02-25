@@ -20,6 +20,8 @@
 			$( 'a[data-switcher-target]' ).on( 'click', function(){
 				self.changeToTarget( $( this ).data( 'switcher-target' ) );
 			} );
+
+			this.checkForURL();
 		},
 
 		change: function( button ) {
@@ -28,12 +30,30 @@
 			this.items.velocity( 'fadeOut', { duration: 500 } );
 			final_item.velocity( 'fadeIn', { duration: 500 } );
 
+			window.location.hash = target;
+
 		},
 
 		changeToTarget: function ( target ) {
 			var final_item = this.items.filter( '[data-id=' + target + ']' );
 			this.items.velocity( 'fadeOut', { duration: 500 } );
 			final_item.velocity( 'fadeIn', { duration: 500 } );
+
+			window.location.hash = target;
+		},
+
+		checkForURL: function() {
+
+			var hash = window.location.hash.substr( 1 );
+
+			var target_button = this.buttons.filter( '[data-target="' + hash + '"]' );
+
+			if( target_button.length > 0 ) {
+				//hash have article
+				this.changeToTarget( hash );
+				$( '#clanky' ).velocity( 'scroll', { duration: 1000 } );
+			}
+
 		}
 
 	};
